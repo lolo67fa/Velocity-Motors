@@ -21,7 +21,9 @@
             @foreach($mycar as $car)
                 <div class="col-md-4">
                     <div class="car-card">
-                        <img src="{{ asset($car['image']) }}" class="car-img" alt="{{ $car['name'] }}">
+                        <img src="{{ asset($car['image']) }}" 
+     alt="{{ $car['name'] }}" 
+     style="width:100%; height:260px; object-fit:cover; border-radius:20px 20px 0 0;">
 
                         <div class="car-body">
                             <div class="d-flex justify-content-between align-items-center mb-2">
