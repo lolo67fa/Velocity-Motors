@@ -18,5 +18,6 @@ class CarListing extends Model
         'seller_email',
         'location',
         'status',
+        'image',
     ];
 }

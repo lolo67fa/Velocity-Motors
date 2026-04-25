@@ -75,7 +75,8 @@ class Ecommerce extends Controller
             "price" => $newCar->price,
             "tax" => "15%",
             "status" => $newCar->status,
-            "image" => "images/default-car.jpg",
+            "image" => $newCar->image ?? "images/default-car.jpg",
+          
             "year" => $newCar->year,
             "color" => $newCar->color,
             "mileage" => $newCar->mileage,
@@ -106,7 +107,7 @@ class Ecommerce extends Controller
             "price" => $newCar->price,
             "tax" => "15%",
             "status" => $newCar->status,
-            "image" => "images/default-car.jpg",
+           "image" => $newCar->image ?? "images/default-car.jpg",
             "year" => $newCar->year,
             "color" => $newCar->color,
             "mileage" => $newCar->mileage,
