@@ -42,36 +42,41 @@
 </style>
 
 <div class="hero-section">
+<!-- Navbar -->
+<div class="topbar py-3 px-4">
+    <div class="container d-flex justify-content-between align-items-center">
 
-    <!-- Navbar -->
-    <div class="topbar py-3 px-4">
-        <div class="container d-flex justify-content-between align-items-center">
+        <h3 class="text-white m-0 fw-bold">
+            🚘 Car Store
+        </h3>
 
-            <h3 class="text-white m-0 fw-bold">
-                🚘 Car Store
-            </h3>
+        <div class="d-flex align-items-center gap-2">
 
-            <div>
-                @auth
-                    <form method="POST" action="{{ route('logout') }}" class="d-inline">
-                        @csrf
-                        <button class="btn btn-danger btn-sm px-4">
-                            Logout
-                        </button>
-                    </form>
-                @else
-                    <a href="{{ route('login') }}" class="btn btn-light btn-sm px-4 me-2">
-                        Login
-                    </a>
+            <a href="{{ route('admin.dashboard') }}" class="btn btn-warning btn-sm px-4 fw-bold">
+                Dashboard
+            </a>
 
-                    <a href="{{ route('register') }}" class="btn btn-primary btn-sm px-4">
-                        Register
-                    </a>
-                @endauth
-            </div>
+            @auth
+                <form method="POST" action="{{ route('logout') }}" class="d-inline m-0">
+                    @csrf
+                    <button class="btn btn-danger btn-sm px-4">
+                        Logout
+                    </button>
+                </form>
+            @else
+                <a href="{{ route('login') }}" class="btn btn-light btn-sm px-4">
+                    Login
+                </a>
+
+                <a href="{{ route('register') }}" class="btn btn-primary btn-sm px-4">
+                    Register
+                </a>
+            @endauth
 
         </div>
+
     </div>
+</div>
 
     <!-- Hero -->
     <div class="container d-flex justify-content-center align-items-center" style="min-height:85vh;">
